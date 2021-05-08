@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+</style>
+<body>
+    
+    <h2 style="color: white;background-color: black; text-align: center">Photo Gallery</h2>
+    <br><br>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img width='500' height="400" src="https://imgix.bustle.com/uploads/image/2020/10/7/53a97945-8758-4c3e-a800-0a6ddc0c8ab9-535069688d2c97266a5749dfd7986c58dbb7916d.webp?w=350&h=298&fit=crop&crop=faces&auto=format%2Ccompress">
+                </td>
+                <td>
+                    <img width='500' height="400" src="https://img.cinemablend.com/filter:scale/quill/5/e/d/d/7/0/5edd70b8f3a04cfa6315734c9ebd8d1903e45bdd.jpg?mw=600">
+                </td>
+                <td>
+                    <img width='500' height="400" src="https://imgix.bustle.com/uploads/image/2020/5/5/834af3f0-7b7d-4147-bf5a-6193dcbe551e-hulk.jpg?w=350&h=298&fit=crop&crop=faces&auto=format%2Ccompress">
+                </td>
+                <td>
+                    <img width='500' height="400" src="https://cdn.vox-cdn.com/thumbor/XCfBAuNx-usiyr6WiNEKb54abDw=/99x0:1179x720/1200x800/filters:focal(99x0:1179x720)/cdn.vox-cdn.com/uploads/chorus_image/image/48472747/black-panther.0.0.jpg">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img width='500' height="400" src="https://upload.wikimedia.org/wikipedia/en/2/22/Thanos_in_Avengers_Infinity_War.png">
+                </td>
+                <td>
+                    <img width='500' height="400" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg">
+                </td>
+                <td>
+                    <img width='500' height="400" src="https://www.cnet.com/a/img/n7UdKZYMfW9eu_bgxS5tyBIRpVY=/940x0/2018/11/14/424a7378-fa4e-412c-9ef9-751e81e648fa/gamora.jpg">
+                </td>
+                <td>
+                    <img width='500' height="400" src="https://images.squarespace-cdn.com/content/v1/59d7e2c7e45a7c0ce235bb55/1552056695609-2KJMOHURUOTUGJCJUQWQ/ke17ZwdGBToddI8pDm48kFdj1LU3QXNrC7XCDJRXSjl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1US_GH6w34F4AbXQYP1mTMh6WZrJMPe9RIQ00FIMO_YvQxJ-BQGo94klLBA8TVf45lA/Captain-Marvel-Film-Review.jpg">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 8</div>
+    <img src="https://imgix.bustle.com/uploads/image/2020/10/7/53a97945-8758-4c3e-a800-0a6ddc0c8ab9-535069688d2c97266a5749dfd7986c58dbb7916d.webp?w=350&h=298&fit=crop&crop=faces&auto=format%2Ccompress" style="width:100%; height: 500px">
+    
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 8</div>
+    <img src="https://img.cinemablend.com/filter:scale/quill/5/e/d/d/7/0/5edd70b8f3a04cfa6315734c9ebd8d1903e45bdd.jpg?mw=600" style="width:100%; height: 500px">
+    
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 8</div>
+    <img src="https://imgix.bustle.com/uploads/image/2020/5/5/834af3f0-7b7d-4147-bf5a-6193dcbe551e-hulk.jpg?w=350&h=298&fit=crop&crop=faces&auto=format%2Ccompress" style="width:100%; height: 500px">
+    
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">4 / 8</div>
+    <img src="https://imgix.bustle.com/uploads/image/2020/5/5/834af3f0-7b7d-4147-bf5a-6193dcbe551e-hulk.jpg?w=350&h=298&fit=crop&crop=faces&auto=format%2Ccompress" style="width:100%; height: 500px">
+    
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">5 / 8</div>
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/22/Thanos_in_Avengers_Infinity_War.png" style="width:100%; height: 500px">
+    
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">6 / 8</div>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg" style="width:100%; height: 500px">
+    
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">7 / 8</div>
+    <img src="https://www.cnet.com/a/img/n7UdKZYMfW9eu_bgxS5tyBIRpVY=/940x0/2018/11/14/424a7378-fa4e-412c-9ef9-751e81e648fa/gamora.jpg" style="width:100%; height: 500px">
+    
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">8 / 8</div>
+    <img src="https://images.squarespace-cdn.com/content/v1/59d7e2c7e45a7c0ce235bb55/1552056695609-2KJMOHURUOTUGJCJUQWQ/ke17ZwdGBToddI8pDm48kFdj1LU3QXNrC7XCDJRXSjl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1US_GH6w34F4AbXQYP1mTMh6WZrJMPe9RIQ00FIMO_YvQxJ-BQGo94klLBA8TVf45lA/Captain-Marvel-Film-Review.jpg" style="width:100%; height: 500px">
+    
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+    
+    
+</body>
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
